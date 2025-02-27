@@ -1,0 +1,26 @@
+class Employee { 
+    private int id; 
+    private double salary; 
+    public Employee(int id, double salary) { 
+        this.id = id; 
+        this.salary = salary; 
+    } 
+    public double getSalary() { 
+        return salary;   
+    } 
+    public void setSalary(double newSalary) { 
+        if (newSalary >= 30000) { 
+            this.salary = newSalary; 
+        } else { 
+            System.out.println("Error: salary can't be below the minimum threshold of 30000."); 
+        } 
+    } 
+    public static void main(String[] args) { 
+        Employee emp = new Employee(89, 40000);   
+        System.out.println("Current Salary: " + emp.getSalary());   
+        emp.setSalary(28000);   
+        System.out.println("Updated Salary: " + emp.getSalary());   
+       emp.setSalary(35000);   
+        System.out.println("Updated Salary: " + emp.getSalary());   
+    } 
+}
